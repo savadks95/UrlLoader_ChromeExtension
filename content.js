@@ -12,10 +12,11 @@ async function getapi(url) {
     var data = await response.text();
     console.log(data);
     
-    chrome.tabs.getSelected(null, function(tab) {
-        chrome.tabs.remove(tab.id);
-        });
-    window.open(data);
+    // chrome.tabs.getSelected(null, function(tab) {
+    //      chrome.tabs.remove(tab.id);
+    //     });
+        
+    window.open(data,"_self");
 }
 // Calling that async function
 getapi(api_url);
